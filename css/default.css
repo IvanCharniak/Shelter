@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 14px;
+  color: #1A1A1A;
+  font-weight: 400;
+  text-decoration: none;
+  color: black; }
+
+.containerM {
+  margin: 0 auto;
+  width: 1217px; }
+
+.containerL {
+  margin: 0 auto;
+  width: 1920px; }
+
+.containerS {
+  margin: 0 auto;
+  width: 1045px; }
+
+a {
+  text-decoration: none;
+  color: #1A1A1A; }
+
+/*# sourceMappingURL=default.css.map */
