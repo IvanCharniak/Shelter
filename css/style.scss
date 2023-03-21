@@ -263,7 +263,6 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: red;
         height: 120px;
 
         font-family: 'Georgia';
@@ -295,5 +294,112 @@ header {
         li:last-child {
             margin-right: 0;
         }
+    }
+}
+
+.donation {
+    height: 462px;
+    position: relative;
+    padding: 80px 0px 100px 0px;
+    background: url('../img/donation-dog.png') no-repeat left 183px top 91px;
+
+    .content{
+        position: absolute;
+        height: 282px;
+        left: 718px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        h3{
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+            color: #545454;
+        }
+        p:first-of-type{
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+            color: #545454; 
+        }
+        div{
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+            letter-spacing: 0.06em;
+            padding: 0px 10px 0px 10px;
+
+                img{
+                    margin-right: 15px;
+                }
+        }
+        p:last-of-type{
+            font-family: 'Arial';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 12px;
+
+            color: #B2B2B2;
+        }
+    }
+}
+
+footer{
+    display: flex;
+    height: 350px;
+    padding: 40px 40px 60px 40px;
+    background-color: brown;
+
+  
+    background-image: url('../img/footer-puppy.png');
+    background-repeat: no-repeat;
+    background-position: top 40px right 40px;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        li:first-child {
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 130%;
+
+            letter-spacing: 0.06em;
+            color: white;
+        }
+        li{
+            display: flex;
+            align-items: center;
+
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+            color: #F1CDB3;        
+
+            letter-spacing: 0.06em;
+
+                img{
+                    margin-right: 20px;
+                }
+        }
+    }
+    .contacts {
+        margin-right: 160px;
     }
 }
