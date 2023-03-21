@@ -150,6 +150,7 @@ header ul li:last-child {
 }
 
 .ourFriends {
+  height: 877px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,6 +158,13 @@ header ul li:last-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0px 100px 0px;
 }
 .ourFriends h3 {
   font-family: 'Georgia';
@@ -173,6 +181,7 @@ header ul li:last-child {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0px 145px 0px 145px;
+  position: relative;
 }
 .ourFriends .cards div {
   height: 435px;
@@ -190,6 +199,7 @@ header ul li:last-child {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 90px;
 }
 .ourFriends .cards div button {
   height: 52px;
@@ -210,12 +220,18 @@ header ul li:last-child {
   line-height: 23px;
   color: #545454;
 }
+.ourFriends .cards > div:last-of-type {
+  margin-right: 0;
+}
 .ourFriends .cards button.prew {
   height: 52px;
   width: 52px;
   border-radius: 50%;
   border: 2px solid #F1CDB3;
   background: url("../img/ArrowLeft.png") no-repeat center center;
+  position: absolute;
+  top: 192px;
+  left: 40px;
 }
 .ourFriends .cards button.next {
   height: 52px;
@@ -223,6 +239,94 @@ header ul li:last-child {
   border-radius: 50%;
   border: 2px solid #F1CDB3;
   background: url("../img/ArrowRight.png") no-repeat center center;
+  position: absolute;
+  top: 192px;
+  right: 40px;
+}
+.ourFriends button.more {
+  background-color: #F1CDB3;
+  color: #292929;
+  border: none;
+  border-radius: 100px;
+  width: 251px;
+  height: 52px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+}
+
+.helpShelter {
+  height: 611px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0px 100px 0px;
+}
+.helpShelter h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.helpShelter li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: red;
+  height: 120px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  color: #545454;
+}
+.helpShelter li p {
+  display: block;
+  margin-top: 30px;
+}
+.helpShelter .iconsOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 127px 0px 127px;
+}
+.helpShelter .iconsOne li:last-child {
+  margin-right: 0;
+}
+.helpShelter .iconsTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 211px 0px 211px;
+}
+.helpShelter .iconsTwo li:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
