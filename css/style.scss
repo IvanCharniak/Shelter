@@ -1,4 +1,7 @@
 
+html{
+    scroll-behavior: smooth;
+}
 
 .container {
     width: 1280px;
@@ -76,9 +79,13 @@ header {
         font-weight: 400;
         font-size: 32px;
         line-height: 110%;
-        color:#F1CDB3;
-
+        
         margin-bottom: 10px;
+
+            a{
+                color:#F1CDB3;
+
+            }
     }
     p {
         font-family: 'Arial';
@@ -99,11 +106,15 @@ header {
         font-weight: 400;
         font-size: 15px;
         line-height: 160%;
-        color: #FAFAFA;
+       
 
         li{
             margin-right: 35px;
             border-bottom: 3px solid #F1CDB3;
+            
+            a{
+                color: #FAFAFA;
+            }
         }
         li:last-child{
             margin-right: 0;
@@ -402,6 +413,10 @@ footer{
                 img{
                     margin-right: 20px;
                 }
+
+                a{
+                    color: #F1CDB3;  
+                }
         }
     }
     .contacts {
@@ -414,3 +429,158 @@ footer{
         right: 40px;
     }
 }
+
+
+// "our pages" page styles
+header.petsPage{
+    padding: 30px 40px 0px 40px;
+    h1 {
+        a{
+            color:#545454;
+        }
+    }
+    p {
+        color:#292929
+    }
+    ul{
+        a{
+            color:#545454;
+        }
+
+    }
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px 100px 40px;
+
+   
+
+    h3 {
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+
+        
+    };
+    .cards  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        
+        div {
+            height: 435px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            justify-content: space-between;
+
+
+            button {
+                height: 52px;
+                width: 187px;
+                border: 2px solid #F1CDB3;
+                border-radius: 100px;
+
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 130%;
+            }
+
+            p{
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+                color: #545454;
+            }
+        }
+        
+        &>div:last-of-type{
+            margin-right: 0;
+        }
+        button.prew {
+            height: 52px;
+            width: 52px;
+            border-radius: 50%;
+            border: 2px solid #F1CDB3;
+            background: url('../img/ArrowLeft.png') no-repeat center center;
+
+            position: absolute;
+            top: 192px;
+            left: 40px;
+        }
+        button.next{
+            height: 52px;
+            width: 52px;
+            border-radius: 50%;
+            border: 2px solid #F1CDB3;
+            background: url('../img/ArrowRight.png') no-repeat center center;
+
+            position: absolute;
+            top: 192px;
+            right: 40px;
+        }
+    }
+
+    button.more{
+        background-color: #F1CDB3;
+        color: #292929;
+        border: none;
+        border-radius: 100px;
+        width: 251px;
+        height: 52px;
+
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 130%;
+    }
+}
+
+.paginator {
+    padding: 60px 270px 0px 270px;
+
+    button{
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid #F1CDB3;
+
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+
+        letter-spacing: 0.06em;
+
+        margin-right: 20px;
+    }
+    &>button:last-of-type{
+        margin-right: 0;
+    }
+    .btnDisabled{
+        color: #CDCDCD;
+    }
+    .btnEnabled{
+        color: #292929;
+    }
+    .curentPage{
+        background-color:  #CDCDCD;
+    }
+    
+}
+
+

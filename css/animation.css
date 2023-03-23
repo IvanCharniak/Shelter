@@ -1,0 +1,7 @@
+body {
+  cursor: url("../img/cursors/normal.png"), default; }
+
+a:hover {
+  cursor: url("../img/cursors/pointer.png"), auto; }
+
+/*# sourceMappingURL=animation.css.map */
