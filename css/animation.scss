@@ -1,0 +1,81 @@
+// navigation links
+
+header {
+    ul{
+        li:hover{
+            transition: 400ms;
+            border-bottom: 3px solid #F1CDB3;
+        }
+        li{
+            a:target{
+                border-bottom: 3px solid #F1CDB3;
+            }
+        }
+    }
+}
+header.petsPage {
+    ul{
+
+        li{
+            a:target{
+                border-bottom: 3px solid #F1CDB3;
+            }
+        }
+    }
+}
+
+button:hover{
+    animation: btnAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes btnAnim {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, 2px);
+	}
+
+	80% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+// pets cards anim
+.cards{
+    div:hover{
+        transition: 400ms;
+        background-color: #F1CDB3;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+    }
+}
+
+// paginator btns anim
+
+.paginator{
+    button:hover{
+        background-color:  #CDCDCD;
+        color: #292929;
+    }
+}
+
+//links
+
+a:hover{
+    transition: 400ms;
+    transform: scale(1.05);
+}

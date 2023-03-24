@@ -1,3 +1,94 @@
+header ul li:hover {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  border-bottom: 3px solid #F1CDB3;
+}
+header ul li a:target {
+  border-bottom: 3px solid #F1CDB3;
+}
+
+header.petsPage ul li a:target {
+  border-bottom: 3px solid #F1CDB3;
+}
+
+button:hover {
+  -webkit-animation: btnAnim 2s ease 0s 1 normal forwards;
+          animation: btnAnim 2s ease 0s 1 normal forwards;
+}
+
+@-webkit-keyframes btnAnim {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes btnAnim {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+.cards div:hover {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background-color: #F1CDB3;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.paginator button:hover {
+  background-color: #CDCDCD;
+  color: #292929;
+}
+
+a:hover {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -110,10 +201,13 @@ header ul {
 }
 header ul li {
   margin-right: 35px;
-  border-bottom: 3px solid #F1CDB3;
+  border-bottom: 3px solid #f1cdb300;
 }
 header ul li a {
   color: #FAFAFA;
+}
+header ul li:first-child {
+  border-bottom: 3px solid #F1CDB3;
 }
 header ul li:last-child {
   margin-right: 0;
@@ -466,6 +560,12 @@ header.petsPage p {
 }
 header.petsPage ul a {
   color: #545454;
+}
+header.petsPage ul li:first-child {
+  border-bottom: 3px solid #f1cdb300;
+}
+header.petsPage ul li:nth-child(2) {
+  border-bottom: 3px solid #F1CDB3;
 }
 
 main {

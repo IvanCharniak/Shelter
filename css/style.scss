@@ -1,3 +1,5 @@
+@import 'animation.scss';
+
 
 html{
     scroll-behavior: smooth;
@@ -110,11 +112,14 @@ header {
 
         li{
             margin-right: 35px;
-            border-bottom: 3px solid #F1CDB3;
+            border-bottom: 3px solid #f1cdb300;
             
             a{
                 color: #FAFAFA;
             }
+        }
+        li:first-child{
+            border-bottom: 3px solid #F1CDB3;
         }
         li:last-child{
             margin-right: 0;
@@ -192,6 +197,7 @@ header {
             justify-content: space-between;
 
             margin-right: 90px;
+
 
             button {
                 height: 52px;
@@ -446,7 +452,12 @@ header.petsPage{
         a{
             color:#545454;
         }
-
+        li:first-child{
+            border-bottom: 3px solid #f1cdb300;
+        }
+        li:nth-child(2){
+            border-bottom: 3px solid #F1CDB3;
+        }
     }
 
 }
