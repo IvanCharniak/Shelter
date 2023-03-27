@@ -135,7 +135,16 @@ section.start div.content p {
   line-height: 160%;
   color: #CDCDCD;
 }
-section.start div.content button {
+section.start div.content a.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #F1CDB3;
   width: 207px;
   height: 52px;
@@ -344,7 +353,16 @@ header ul li:last-child {
   top: 192px;
   right: 40px;
 }
-.ourFriends button.more {
+.ourFriends a.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #F1CDB3;
   color: #292929;
   border: none;

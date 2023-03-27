@@ -47,7 +47,10 @@ section.start {
             color: #CDCDCD;
         }
     
-        button{
+        a.button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #F1CDB3;
             width: 207px;
             height: 52px;
@@ -248,7 +251,10 @@ header {
         }
     }
 
-    button.more{
+    a.button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #F1CDB3;
         color: #292929;
         border: none;
