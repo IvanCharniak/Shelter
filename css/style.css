@@ -1,80 +1,37 @@
-header ul li:hover {
-  -webkit-transition: 400ms;
-  transition: 400ms;
-  border-bottom: 3px solid #F1CDB3;
+header ul li:hover a {
+  color: #FAFAFA;
 }
-header ul li a:target {
-  border-bottom: 3px solid #F1CDB3;
-}
-
-header.petsPage ul li a:target {
+header ul li a:active {
   border-bottom: 3px solid #F1CDB3;
 }
 
-button:hover {
-  -webkit-animation: btnAnim 2s ease 0s 1 normal forwards;
-          animation: btnAnim 2s ease 0s 1 normal forwards;
+header.petsPage ul li:hover a {
+  color: #292929;
+}
+header.petsPage ul li a:active {
+  border-bottom: 3px solid #F1CDB3;
 }
 
-@-webkit-keyframes btnAnim {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@keyframes btnAnim {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
 .cards div:hover {
   -webkit-transition: 400ms;
   transition: 400ms;
-  background-color: #F1CDB3;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.cards div:hover button {
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  background-color: #FDDCC4;
+  border: none !important;
+}
+.cards button.prew:hover, .cards button.next:hover {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background: url("../img/button_arrow_hover.png") !important;
+  cursor: pointer;
 }
 
 .paginator button:hover {
@@ -82,15 +39,22 @@ button:hover {
   color: #292929;
 }
 
-a:hover {
+.buttonPrimary:hover {
   -webkit-transition: 400ms;
   transition: 400ms;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  background-color: #FDDCC4 !important;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h3 {
+  letter-spacing: 0.06em;
+}
+
+button {
+  letter-spacing: 0.06em;
 }
 
 .container {
@@ -101,11 +65,26 @@ html {
 section.start {
   padding: 30px 40px 0px 40px;
   height: 908px;
-  background: url("../img/start-screen-background.jpg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: url("../img/start-screen-background.jpg");
   background-repeat: no-repeat;
-  position: relative;
+  background-size: cover;
 }
 section.start div.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 908px;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 90px 40px 0px 40px;
+}
+section.start div.content .aboutContent {
+  padding-top: 163px;
+  padding-bottom: 243px;
+  height: 728px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,10 +95,8 @@ section.start div.content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 253px;
-  height: 322px;
 }
-section.start div.content h2 {
+section.start div.content .aboutContent h2 {
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -127,7 +104,7 @@ section.start div.content h2 {
   line-height: 130%;
   color: white;
 }
-section.start div.content p {
+section.start div.content .aboutContent p {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
@@ -135,7 +112,7 @@ section.start div.content p {
   line-height: 160%;
   color: #CDCDCD;
 }
-section.start div.content a.button {
+section.start div.content .aboutContent a.buttonPrimary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,14 +133,15 @@ section.start div.content a.button {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
+  letter-spacing: 0.06em;
 }
-section.start div.content img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+section.start div.content .aboutImg {
+  height: 728px;
+  position: relative;
 }
 
 header {
+  width: 1280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,6 +151,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
+  padding: 0px 40px 0px 40px;
 }
 header h1 {
   font-family: 'Georgia';
@@ -180,6 +160,7 @@ header h1 {
   font-weight: 400;
   font-size: 32px;
   line-height: 110%;
+  letter-spacing: 0.06em;
   margin-bottom: 10px;
 }
 header h1 a {
@@ -191,6 +172,7 @@ header p {
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
+  letter-spacing: 0.1em;
   padding-left: 4px;
   color: white;
 }
@@ -212,10 +194,13 @@ header ul li {
   border-bottom: 3px solid #f1cdb300;
 }
 header ul li a {
-  color: #FAFAFA;
+  color: #CDCDCD;
 }
 header ul li:first-child {
   border-bottom: 3px solid #F1CDB3;
+}
+header ul li:first-child a {
+  color: #FAFAFA;
 }
 header ul li:last-child {
   margin-right: 0;
@@ -282,6 +267,13 @@ header ul li:last-child {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 .ourFriends .cards {
   display: -webkit-box;
@@ -305,11 +297,13 @@ header ul li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-right: 90px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
 }
 .ourFriends .cards div button {
   height: 52px;
@@ -329,6 +323,10 @@ header ul li:last-child {
   font-size: 20px;
   line-height: 23px;
   color: #545454;
+  letter-spacing: 0.06em;
+}
+.ourFriends .cards div div:hover ~ button {
+  background-color: #ea7623;
 }
 .ourFriends .cards > div:last-of-type {
   margin-right: 0;
@@ -336,9 +334,8 @@ header ul li:last-child {
 .ourFriends .cards button.prew {
   height: 52px;
   width: 52px;
-  border-radius: 50%;
-  border: 2px solid #F1CDB3;
-  background: url("../img/ArrowLeft.png") no-repeat center center;
+  background: url("../img/button_arrow.png") no-repeat center center;
+  border: none;
   position: absolute;
   top: 192px;
   left: 40px;
@@ -346,14 +343,15 @@ header ul li:last-child {
 .ourFriends .cards button.next {
   height: 52px;
   width: 52px;
-  border-radius: 50%;
-  border: 2px solid #F1CDB3;
-  background: url("../img/ArrowRight.png") no-repeat center center;
+  border: none;
+  background: url("../img/button_arrow.png") no-repeat center center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   position: absolute;
   top: 192px;
   right: 40px;
 }
-.ourFriends a.button {
+.ourFriends a.buttonPrimary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,13 +365,14 @@ header ul li:last-child {
   color: #292929;
   border: none;
   border-radius: 100px;
-  width: 251px;
+  width: 261px;
   height: 52px;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
+  letter-spacing: 0.06em;
 }
 
 .helpShelter {
@@ -398,6 +397,7 @@ header ul li:last-child {
   line-height: 130%;
   -ms-flex-item-align: center;
       align-self: center;
+  text-align: center;
 }
 .helpShelter li {
   display: -webkit-box;
@@ -410,17 +410,20 @@ header ul li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 120px;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 .helpShelter li p {
   display: block;
-  margin-top: 30px;
 }
 .helpShelter .iconsOne {
   display: -webkit-box;
@@ -494,6 +497,19 @@ header ul li:last-child {
   line-height: 115%;
   letter-spacing: 0.06em;
   padding: 0px 10px 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 349px;
+  height: 43px;
+  background-color: #F1CDB3;
+  border-radius: 9px;
 }
 .donation .content div img {
   margin-right: 15px;
@@ -503,6 +519,7 @@ header ul li:last-child {
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
+  line-height: 18px;
   color: #B2B2B2;
 }
 
@@ -510,12 +527,24 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: url("../img/footer-background.png");
+  background-size: cover;
   height: 350px;
-  padding: 40px 40px 60px 40px;
-  position: relative;
-  background: url("../img/footer-background.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
 }
-footer ul {
+footer .content {
+  width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 56px 40px 60px 40px;
+}
+footer .content div.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .content div.contacts ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,7 +556,7 @@ footer ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer ul li:first-child {
+footer .content div.contacts ul li:first-child {
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -536,7 +565,7 @@ footer ul li:first-child {
   letter-spacing: 0.06em;
   color: white;
 }
-footer ul li {
+footer .content div.contacts ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,23 +580,23 @@ footer ul li {
   color: #F1CDB3;
   letter-spacing: 0.06em;
 }
-footer ul li img {
+footer .content div.contacts ul li img {
   margin-right: 20px;
 }
-footer ul li a {
+footer .content div.contacts ul li a {
   color: #F1CDB3;
 }
-footer .contacts {
+footer .content div.contacts ul.contacts {
   margin-right: 160px;
 }
-footer > img {
-  position: absolute;
-  top: 40px;
-  right: 40px;
+footer .content div.footerImg {
+  position: relative;
+  top: -16px;
+  right: -170px;
 }
 
 header.petsPage {
-  padding: 30px 40px 0px 40px;
+  padding: 30px 40px 30px 40px;
 }
 header.petsPage h1 a {
   color: #545454;
@@ -580,6 +609,9 @@ header.petsPage ul a {
 }
 header.petsPage ul li:first-child {
   border-bottom: 3px solid #f1cdb300;
+}
+header.petsPage ul li:first-child a {
+  color: #545454;
 }
 header.petsPage ul li:nth-child(2) {
   border-bottom: 3px solid #F1CDB3;
@@ -599,7 +631,10 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 1280px;
+  margin: 0 auto;
   padding: 80px 40px 100px 40px;
+  height: 1342px;
 }
 main h3 {
   font-family: 'Georgia';
@@ -607,6 +642,7 @@ main h3 {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  text-align: center;
 }
 main .cards {
   display: -webkit-box;
@@ -618,6 +654,8 @@ main .cards {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  height: 930px;
+  padding-top: 15px;
 }
 main .cards div {
   height: 435px;
@@ -631,7 +669,7 @@ main .cards div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -654,6 +692,7 @@ main .cards div p {
   font-size: 20px;
   line-height: 23px;
   color: #545454;
+  letter-spacing: 0.06em;
 }
 main .cards > div:last-of-type {
   margin-right: 0;
@@ -691,15 +730,13 @@ main button.more {
   font-size: 17px;
   line-height: 130%;
 }
-
-.paginator {
-  padding: 60px 270px 0px 270px;
+main .paginator {
+  padding: 0px 270px 0px 270px;
 }
-.paginator button {
+main .paginator button {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 2px solid #F1CDB3;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -708,17 +745,20 @@ main button.more {
   letter-spacing: 0.06em;
   margin-right: 20px;
 }
-.paginator > button:last-of-type {
+main .paginator > button:last-of-type {
   margin-right: 0;
 }
-.paginator .btnDisabled {
+main .paginator .btnDisabled {
   color: #CDCDCD;
+  border: 2px solid #CDCDCD;
 }
-.paginator .btnEnabled {
-  color: #292929;
+main .paginator .btnEnabled {
+  color: #F1CDB3;
+  border: 2px solid #F1CDB3;
 }
-.paginator .curentPage {
-  background-color: #CDCDCD;
+main .paginator .curentPage {
+  background-color: #F1CDB3;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
