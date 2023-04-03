@@ -4,43 +4,44 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
 h3{
     letter-spacing: 0.06em;
 }
 button{
     letter-spacing: 0.06em;
 }
+p{
+    white-space: pre-wrap;
+}
 
 .container {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0px 40px 0px 40px;
     
  
    
 }
 
 section.start {
-    padding: 30px 40px 0px 40px;
-    height: 908px;
+    padding: 30px 0px 0px 0px;
     background:url('../img/start-screen-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
     div.content {
         display: flex;
-        justify-content: space-between;
-        height: 908px;
-        width: 1280px;
+        justify-content: center;
         margin: 0 auto;
         padding: 90px 40px 0px 40px;
     
         .aboutContent{
-            padding-top: 163px;
-            padding-bottom: 243px;
-            height: 728px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            padding-top: 153px;
             h2 {
                 font-family: 'Georgia';
                 font-style: normal;
@@ -48,15 +49,19 @@ section.start {
                 font-size: 44px;
                 line-height: 130%;
                 color: white;
+                margin-bottom: 42px;
+                letter-spacing: 0.06em;
             }  
         
             p {
+                max-width: 460px;
                 font-family: 'Arial';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 15px;
                 line-height: 160%;
                 color: #CDCDCD;
+                margin-bottom: 42px;
             }
         
             a.buttonPrimary{
@@ -80,9 +85,11 @@ section.start {
         }
         
         .aboutImg {
-            height: 728px;
             position: relative;
-               
+            display: flex;
+               img{
+                margin-left: 42px;
+               }
          }   
     
     }
@@ -90,7 +97,7 @@ section.start {
 header {
     width: 1280px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding: 0px 40px 0px 40px;
@@ -132,6 +139,7 @@ header {
         font-weight: 400;
         font-size: 15px;
         line-height: 160%;
+        margin-left: 573px;
        
 
         li{
@@ -152,26 +160,24 @@ header {
             margin-right: 0;
         }
     }
+    .menuBurger{
+        display: none;
+    }
 }
 
 
 
 .about{
-    height: 588px;
-    padding-top: 94px;
-    background-image: url('../img/about.png');
-    background-repeat: no-repeat;
-    background-position: left 215px top 80px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px 100px 0px;
 
     .content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        position: absolute;
-        left: 635px;
-
-        height: 380px;
+        padding: 14px 0px 14px 120px;
 
         h3 {
             font-family: 'Georgia';
@@ -179,24 +185,27 @@ header {
             font-weight: 400;
             font-size: 35px;
             line-height: 130%;
+            margin-bottom: 25px;
         }
         p {
+            max-width: 430px;
             font-family: 'Arial';
             font-style: normal;
             font-weight: 400;
             font-size: 15px;
             line-height: 160%;
         }
+        p:first-of-type{
+            margin-bottom: 25px;
+        }
     }
 }
 
 .ourFriends {
-    height: 877px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 80px 0px 100px 0px;
+    padding: 80px 40px 100px 40px;
 
    
 
@@ -208,27 +217,31 @@ header {
         line-height: 130%;
         display: flex;
         justify-content: center;
-        text-align: center
+        text-align: center;
+        margin-bottom: 60px;
         
     };
     .cards  {
         display: flex;
         justify-content: space-between;
-        padding: 0px 145px 0px 145px;
+        margin-bottom: 60px;
+        align-items: center;
         position: relative;
         
         div {
-            height: 435px;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding-bottom: 30px;
             justify-content: space-between;
-
             margin-right: 90px;
+
             background-color: #FAFAFA;
             border-radius: 9px;
-
+            position: relative;
+            img{
+                margin-bottom: 30px;
+            }
             button {
                 height: 52px;
                 width: 187px;
@@ -250,6 +263,7 @@ header {
                 line-height: 23px;
                 color: #545454;
                 letter-spacing: 0.06em;
+                margin-bottom: 30px;
             }
             div:hover ~ button {
         background-color: #ea7623
@@ -264,9 +278,10 @@ header {
             width: 52px;
             background: url('../img/button_arrow.png') no-repeat center center;
             border: none;
-            position: absolute;
-            top: 192px;
-            left: 40px;
+            display: block;
+
+            position:absolute;
+            left: -105px;
         }
         button.next{
             height: 52px;
@@ -274,9 +289,10 @@ header {
             border: none;
             background: url('../img/button_arrow.png') no-repeat center center;
             transform: rotate(180deg);
-            position: absolute;
-            top: 192px;
-            right: 40px;
+            display: block;
+
+            position:absolute;
+            right:-105px;
         }
     }
 
@@ -301,11 +317,10 @@ header {
 }
 
 .helpShelter {
-    height: 611px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 80px 0px 100px 0px;
+    padding: 80px 40px 100px 40px;
 
     h3{
         font-family: 'Georgia';
@@ -321,8 +336,6 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        height: 120px;
 
         font-family: 'Georgia';
         font-style: normal;
@@ -333,40 +346,49 @@ header {
         color: #545454;
 
             p{
+                padding-top: 30px;
                 display: block;
+                text-align: center;
             }
     }
-    .iconsOne {
+    ul {
+        padding-top: 60px;
         display: flex;
-        justify-content: space-between;
-        padding: 0px 127px 0px 127px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px 120px;
 
-        li:last-child {
-            margin-right: 0;
-        }
-    }
-    .iconsTwo {
-        display: flex;
-        justify-content: space-between;
-        padding: 0px 211px 0px 211px;
 
-        li:last-child {
-            margin-right: 0;
-        }
     }
+    // .iconsOne {
+    //     display: flex;
+    //     justify-content: center;
+
+    //     li:last-child {
+    //         margin-right: 0;
+    //     }
+    // }
+    // .iconsTwo {
+    //     display: flex;
+    //     justify-content: center;
+
+    //     li:last-child {
+    //         margin-right: 0;
+    //     }
+    // }
 }
 
 .donation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 462px;
     position: relative;
     padding: 80px 0px 100px 0px;
-    background: url('../img/donation-dog.png') no-repeat left 183px top 91px;
 
     .content{
-        position: absolute;
         height: 282px;
-        left: 718px;
-
+        margin-left: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -412,6 +434,7 @@ header {
                 }
         }
         p:last-of-type{
+            max-width: 380px;
             font-family: 'Arial';
             font-style: italic;
             font-weight: 400;
@@ -420,22 +443,29 @@ header {
             color: #B2B2B2;
         }
     }
+    .img{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+   
 }
 
 footer{
     display: flex;
     background:url('../img/footer-background.png');
     background-size: cover;
-    height: 350px;
     .content{
         width: 1280px;
         margin: 0 auto;
         display: flex;
-        padding: 56px 40px 60px 40px;
+        padding: 40px 40px 0px 40px;
 
         div.contacts{
             display: flex;
             ul{
+                height: 234px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -449,6 +479,7 @@ footer{
         
                     letter-spacing: 0.06em;
                     color: white;
+                    max-width: 279px;
                 }
                 li{
                     display: flex;
@@ -460,7 +491,7 @@ footer{
                     font-size: 20px;
                     line-height: 115%;
                     color: #F1CDB3;        
-        
+                    
                     letter-spacing: 0.06em;
         
                         img{
@@ -471,14 +502,17 @@ footer{
                             color: #F1CDB3;  
                         }
                 }
+                li:last-child{
+                    margin-bottom: 0;
+                }
             }
             ul.contacts {
                 margin-right: 160px;
             }
         }
         div.footerImg{
+            display: flex;
             position: relative;
-            top: -16px;
             right: -170px;
 
            
@@ -490,7 +524,7 @@ footer{
 }
 
 
-// "our pages" page styles
+// "our pages" page styless
 header.petsPage{
     padding: 30px 40px 30px 40px;
     h1 {
@@ -515,6 +549,9 @@ header.petsPage{
             border-bottom: 3px solid #F1CDB3;
         }
     }
+    .menuBurger{
+        display: none;
+    }
 
 }
 main{
@@ -522,10 +559,10 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 80px 40px 100px 40px;
-    height: 1342px;
+    height: auto;
 
    
 
@@ -537,24 +574,23 @@ main{
         line-height: 130%;
         text-align: center;
 
-        
+        margin-bottom: 60px;
     };
     .cards  {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         position: relative;
-        height: 930px;
-        padding-top: 15px;
+        margin-bottom: 60px;
+        gap: 30px 0px;
         div {
-            height: 435px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 30px;
-            justify-content: space-between;
 
-
+            img{
+                margin-bottom: 30px;
+            }
             button {
                 height: 52px;
                 width: 187px;
@@ -566,6 +602,7 @@ main{
                 font-weight: 400;
                 font-size: 17px;
                 line-height: 130%;
+                margin-bottom: 60px;
             }
 
             p{
@@ -576,34 +613,14 @@ main{
                 line-height: 23px;
                 color: #545454;
                 letter-spacing: 0.06em;
+                margin-bottom: 30px;
             }
         }
         
         &>div:last-of-type{
             margin-right: 0;
         }
-        button.prew {
-            height: 52px;
-            width: 52px;
-            border-radius: 50%;
-            border: 2px solid #F1CDB3;
-            background: url('../img/ArrowLeft.png') no-repeat center center;
 
-            position: absolute;
-            top: 192px;
-            left: 40px;
-        }
-        button.next{
-            height: 52px;
-            width: 52px;
-            border-radius: 50%;
-            border: 2px solid #F1CDB3;
-            background: url('../img/ArrowRight.png') no-repeat center center;
-
-            position: absolute;
-            top: 192px;
-            right: 40px;
-        }
     }
 
     button.more{
@@ -622,7 +639,6 @@ main{
     }
 
     .paginator {
-        padding: 0px 270px 0px 270px;
     
         button{
             width: 52px;
@@ -637,7 +653,7 @@ main{
     
             letter-spacing: 0.06em;
     
-            margin-right: 20px;
+            margin-right: 15px;
         }
         &>button:last-of-type{
             margin-right: 0;
@@ -661,3 +677,4 @@ main{
 
 
 
+@import 'media.scss';
