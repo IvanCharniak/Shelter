@@ -1,80 +1,37 @@
-header ul li:hover {
-  -webkit-transition: 400ms;
-  transition: 400ms;
-  border-bottom: 3px solid #F1CDB3;
+header ul li:hover a {
+  color: #FAFAFA;
 }
-header ul li a:target {
-  border-bottom: 3px solid #F1CDB3;
-}
-
-header.petsPage ul li a:target {
+header ul li a:active {
   border-bottom: 3px solid #F1CDB3;
 }
 
-button:hover {
-  -webkit-animation: btnAnim 2s ease 0s 1 normal forwards;
-          animation: btnAnim 2s ease 0s 1 normal forwards;
+header.petsPage ul li:hover a {
+  color: #292929;
+}
+header.petsPage ul li a:active {
+  border-bottom: 3px solid #F1CDB3;
 }
 
-@-webkit-keyframes btnAnim {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@keyframes btnAnim {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
 .cards div:hover {
   -webkit-transition: 400ms;
   transition: 400ms;
-  background-color: #F1CDB3;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.cards div:hover button {
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  background-color: #FDDCC4;
+  border: none !important;
+}
+.cards button.prew:hover, .cards button.next:hover {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background: url("../img/button_arrow_hover.png") !important;
+  cursor: pointer;
 }
 
 .paginator button:hover {
@@ -82,31 +39,55 @@ button:hover {
   color: #292929;
 }
 
-a:hover {
+.buttonPrimary:hover {
   -webkit-transition: 400ms;
   transition: 400ms;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  background-color: #FDDCC4 !important;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+h3 {
+  letter-spacing: 0.06em;
+}
+
+button {
+  letter-spacing: 0.06em;
+}
+
+p {
+  white-space: pre-wrap;
+}
+
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0px 40px 0px 40px;
 }
 
 section.start {
-  padding: 30px 40px 0px 40px;
-  height: 908px;
-  background: url("../img/start-screen-background.jpg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  padding: 30px 0px 0px 0px;
+  background: url("../img/start-screen-background.jpg");
   background-repeat: no-repeat;
-  background-position: right 40px bottom 0;
-  position: relative;
+  background-size: cover;
 }
 section.start div.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding: 90px 40px 0px 40px;
+}
+section.start div.content .aboutContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,29 +95,38 @@ section.start div.content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 253px;
-  height: 322px;
+  padding-top: 153px;
 }
-section.start div.content h2 {
+section.start div.content .aboutContent h2 {
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
   font-size: 44px;
   line-height: 130%;
   color: white;
+  margin-bottom: 42px;
+  letter-spacing: 0.06em;
 }
-section.start div.content p {
+section.start div.content .aboutContent p {
+  max-width: 460px;
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
+  margin-bottom: 42px;
 }
-section.start div.content button {
+section.start div.content .aboutContent a.buttonPrimary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #F1CDB3;
   width: 207px;
   height: 52px;
@@ -148,23 +138,31 @@ section.start div.content button {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
+  letter-spacing: 0.06em;
 }
-section.start div.content img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-header {
+section.start div.content .aboutImg {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+section.start div.content .aboutImg img {
+  margin-left: 42px;
+}
+
+header {
+  width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
+  padding: 0px 40px 0px 40px;
 }
 header h1 {
   font-family: 'Georgia';
@@ -172,6 +170,7 @@ header h1 {
   font-weight: 400;
   font-size: 32px;
   line-height: 110%;
+  letter-spacing: 0.06em;
   margin-bottom: 10px;
 }
 header h1 a {
@@ -183,6 +182,7 @@ header p {
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
+  letter-spacing: 0.1em;
   padding-left: 4px;
   color: white;
 }
@@ -198,28 +198,39 @@ header ul {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
+  margin-left: 573px;
 }
 header ul li {
   margin-right: 35px;
   border-bottom: 3px solid #f1cdb300;
 }
 header ul li a {
-  color: #FAFAFA;
+  color: #CDCDCD;
 }
 header ul li:first-child {
   border-bottom: 3px solid #F1CDB3;
 }
+header ul li:first-child a {
+  color: #FAFAFA;
+}
 header ul li:last-child {
   margin-right: 0;
 }
+header .menuBurger {
+  display: none;
+}
 
 .about {
-  height: 588px;
-  padding-top: 94px;
-  background-image: url("../img/about.png");
-  background-repeat: no-repeat;
-  background-position: left 215px top 80px;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 80px 0px 100px 0px;
 }
 .about .content {
   display: -webkit-box;
@@ -232,9 +243,7 @@ header ul li:last-child {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
-  left: 635px;
-  height: 380px;
+  padding: 14px 0px 14px 120px;
 }
 .about .content h3 {
   font-family: 'Georgia';
@@ -242,17 +251,21 @@ header ul li:last-child {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  margin-bottom: 25px;
 }
 .about .content p {
+  max-width: 430px;
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
 }
+.about .content p:first-of-type {
+  margin-bottom: 25px;
+}
 
 .ourFriends {
-  height: 877px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,10 +276,7 @@ header ul li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 80px 0px 100px 0px;
+  padding: 80px 40px 100px 40px;
 }
 .ourFriends h3 {
   font-family: 'Georgia';
@@ -274,6 +284,14 @@ header ul li:last-child {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
 }
 .ourFriends .cards {
   display: -webkit-box;
@@ -282,11 +300,13 @@ header ul li:last-child {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0px 145px 0px 145px;
+  margin-bottom: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 .ourFriends .cards div {
-  height: 435px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,11 +317,17 @@ header ul li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-right: 90px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  position: relative;
+}
+.ourFriends .cards div img {
+  margin-bottom: 30px;
 }
 .ourFriends .cards div button {
   height: 52px;
@@ -321,6 +347,11 @@ header ul li:last-child {
   font-size: 20px;
   line-height: 23px;
   color: #545454;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
+}
+.ourFriends .cards div div:hover ~ button {
+  background-color: #ea7623;
 }
 .ourFriends .cards > div:last-of-type {
   margin-right: 0;
@@ -328,39 +359,48 @@ header ul li:last-child {
 .ourFriends .cards button.prew {
   height: 52px;
   width: 52px;
-  border-radius: 50%;
-  border: 2px solid #F1CDB3;
-  background: url("../img/ArrowLeft.png") no-repeat center center;
+  background: url("../img/button_arrow.png") no-repeat center center;
+  border: none;
+  display: block;
   position: absolute;
-  top: 192px;
-  left: 40px;
+  left: -105px;
 }
 .ourFriends .cards button.next {
   height: 52px;
   width: 52px;
-  border-radius: 50%;
-  border: 2px solid #F1CDB3;
-  background: url("../img/ArrowRight.png") no-repeat center center;
+  border: none;
+  background: url("../img/button_arrow.png") no-repeat center center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: block;
   position: absolute;
-  top: 192px;
-  right: 40px;
+  right: -105px;
 }
-.ourFriends button.more {
+.ourFriends a.buttonPrimary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #F1CDB3;
   color: #292929;
   border: none;
   border-radius: 100px;
-  width: 251px;
+  width: 261px;
   height: 52px;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
+  letter-spacing: 0.06em;
 }
 
 .helpShelter {
-  height: 611px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,7 +411,7 @@ header ul li:last-child {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 80px 0px 100px 0px;
+  padding: 80px 40px 100px 40px;
 }
 .helpShelter h3 {
   font-family: 'Georgia';
@@ -381,6 +421,7 @@ header ul li:last-child {
   line-height: 130%;
   -ms-flex-item-align: center;
       align-self: center;
+  text-align: center;
 }
 .helpShelter li {
   display: -webkit-box;
@@ -393,53 +434,49 @@ header ul li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 120px;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 .helpShelter li p {
+  padding-top: 30px;
   display: block;
-  margin-top: 30px;
+  text-align: center;
 }
-.helpShelter .iconsOne {
+.helpShelter ul {
+  padding-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0px 127px 0px 127px;
-}
-.helpShelter .iconsOne li:last-child {
-  margin-right: 0;
-}
-.helpShelter .iconsTwo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0px 211px 0px 211px;
-}
-.helpShelter .iconsTwo li:last-child {
-  margin-right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px 120px;
 }
 
 .donation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 462px;
   position: relative;
   padding: 80px 0px 100px 0px;
-  background: url("../img/donation-dog.png") no-repeat left 183px top 91px;
 }
 .donation .content {
-  position: absolute;
   height: 282px;
-  left: 718px;
+  margin-left: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,28 +514,59 @@ header ul li:last-child {
   line-height: 115%;
   letter-spacing: 0.06em;
   padding: 0px 10px 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 349px;
+  height: 43px;
+  background-color: #F1CDB3;
+  border-radius: 9px;
 }
 .donation .content div img {
   margin-right: 15px;
 }
 .donation .content p:last-of-type {
+  max-width: 380px;
   font-family: 'Arial';
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
+  line-height: 18px;
   color: #B2B2B2;
+}
+.donation .img img {
+  width: 100%;
+  height: auto;
 }
 
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 350px;
-  padding: 40px 40px 60px 40px;
-  position: relative;
-  background: url("../img/footer-background.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+  background: url("../img/footer-background.png");
+  background-size: cover;
 }
-footer ul {
+footer .content {
+  width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 40px 0px 40px;
+}
+footer .content div.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .content div.contacts ul {
+  height: 234px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,7 +578,7 @@ footer ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer ul li:first-child {
+footer .content div.contacts ul li:first-child {
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -518,8 +586,9 @@ footer ul li:first-child {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: white;
+  max-width: 279px;
 }
-footer ul li {
+footer .content div.contacts ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,23 +603,28 @@ footer ul li {
   color: #F1CDB3;
   letter-spacing: 0.06em;
 }
-footer ul li img {
+footer .content div.contacts ul li img {
   margin-right: 20px;
 }
-footer ul li a {
+footer .content div.contacts ul li a {
   color: #F1CDB3;
 }
-footer .contacts {
+footer .content div.contacts ul li:last-child {
+  margin-bottom: 0;
+}
+footer .content div.contacts ul.contacts {
   margin-right: 160px;
 }
-footer > img {
-  position: absolute;
-  top: 40px;
-  right: 40px;
+footer .content div.footerImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  right: -170px;
 }
 
 header.petsPage {
-  padding: 30px 40px 0px 40px;
+  padding: 30px 40px 30px 40px;
 }
 header.petsPage h1 a {
   color: #545454;
@@ -564,8 +638,14 @@ header.petsPage ul a {
 header.petsPage ul li:first-child {
   border-bottom: 3px solid #f1cdb300;
 }
+header.petsPage ul li:first-child a {
+  color: #545454;
+}
 header.petsPage ul li:nth-child(2) {
   border-bottom: 3px solid #F1CDB3;
+}
+header.petsPage .menuBurger {
+  display: none;
 }
 
 main {
@@ -582,7 +662,10 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 80px 40px 100px 40px;
+  height: auto;
 }
 main h3 {
   font-family: 'Georgia';
@@ -590,6 +673,8 @@ main h3 {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  text-align: center;
+  margin-bottom: 60px;
 }
 main .cards {
   display: -webkit-box;
@@ -601,9 +686,10 @@ main .cards {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  margin-bottom: 60px;
+  gap: 30px 0px;
 }
 main .cards div {
-  height: 435px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,10 +700,9 @@ main .cards div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+main .cards div img {
   margin-bottom: 30px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 main .cards div button {
   height: 52px;
@@ -629,6 +714,7 @@ main .cards div button {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
+  margin-bottom: 60px;
 }
 main .cards div p {
   font-family: 'Georgia';
@@ -637,29 +723,11 @@ main .cards div p {
   font-size: 20px;
   line-height: 23px;
   color: #545454;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
 }
 main .cards > div:last-of-type {
   margin-right: 0;
-}
-main .cards button.prew {
-  height: 52px;
-  width: 52px;
-  border-radius: 50%;
-  border: 2px solid #F1CDB3;
-  background: url("../img/ArrowLeft.png") no-repeat center center;
-  position: absolute;
-  top: 192px;
-  left: 40px;
-}
-main .cards button.next {
-  height: 52px;
-  width: 52px;
-  border-radius: 50%;
-  border: 2px solid #F1CDB3;
-  background: url("../img/ArrowRight.png") no-repeat center center;
-  position: absolute;
-  top: 192px;
-  right: 40px;
 }
 main button.more {
   background-color: #F1CDB3;
@@ -674,34 +742,528 @@ main button.more {
   font-size: 17px;
   line-height: 130%;
 }
-
-.paginator {
-  padding: 60px 270px 0px 270px;
-}
-.paginator button {
+main .paginator button {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 2px solid #F1CDB3;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
-  margin-right: 20px;
+  margin-right: 15px;
 }
-.paginator > button:last-of-type {
+main .paginator > button:last-of-type {
   margin-right: 0;
 }
-.paginator .btnDisabled {
+main .paginator .btnDisabled {
   color: #CDCDCD;
+  border: 2px solid #CDCDCD;
 }
-.paginator .btnEnabled {
-  color: #292929;
+main .paginator .btnEnabled {
+  color: #F1CDB3;
+  border: 2px solid #F1CDB3;
 }
-.paginator .curentPage {
-  background-color: #CDCDCD;
+main .paginator .curentPage {
+  background-color: #F1CDB3;
+  border: none;
+}
+
+@media all and (max-width: 1200px) {
+  .ourFriends .cards div {
+    scale: 0.8;
+    margin-right: 0px;
+  }
+  .ourFriends .cards button.prew {
+    left: -40px;
+  }
+  .ourFriends .cards button.next {
+    right: -40px;
+  }
+}
+@media all and (max-width: 1278px) {
+  header {
+    width: auto;
+  }
+  header ul {
+    margin-left: 7vw;
+  }
+
+  section.start div.content .aboutImg img {
+    width: 100%;
+    height: auto;
+  }
+  section.start div.content .aboutContent {
+    padding-top: 0;
+  }
+
+  footer .content {
+    width: auto;
+  }
+  footer .content div.contacts ul.contacts {
+    margin-right: 3vw;
+  }
+  footer .footerImg {
+    position: static !important;
+  }
+  footer .footerImg img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media all and (max-width: 900px) {
+  .cards div:last-of-type {
+    display: none;
+  }
+
+  header {
+    width: auto;
+  }
+  header ul {
+    margin-left: 17vw;
+  }
+
+  footer .content div.contacts ul.contacts li, footer .content div.contacts ul.adress li {
+    font-size: 16px;
+  }
+  footer .content div.contacts ul.contacts li:first-child, footer .content div.contacts ul.adress li:first-child {
+    font-size: 28px;
+  }
+}
+@media all and (max-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  section.start {
+    padding: 30px 30px 0px 30px;
+    height: auto;
+  }
+  section.start div.content {
+    width: auto;
+    padding: 60px 124px 0px 124px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.start div.content .aboutContent {
+    width: auto;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+  section.start div.content .aboutContent a {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  section.start div.content .aboutContent h2 {
+    letter-spacing: normal;
+  }
+  section.start div.content .aboutImg {
+    height: auto;
+  }
+  section.start div.content .aboutImg img {
+    width: 569px;
+    height: 593px;
+    margin-left: 0;
+  }
+
+  header {
+    padding: 0;
+    width: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header ul {
+    margin-left: 0;
+  }
+
+  section.about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    background-position: bottom 0 left 0;
+  }
+  section.about .content {
+    position: static;
+    padding: 0;
+    margin-bottom: 80px;
+  }
+
+  .ourFriends .cards div {
+    scale: 1;
+    margin-right: 40px;
+  }
+  .ourFriends .cards div:nth-of-type(2) {
+    margin-right: 0;
+  }
+  .ourFriends .cards button.prew {
+    left: -64px;
+  }
+  .ourFriends .cards button.next {
+    right: -64px;
+  }
+
+  .helpShelter {
+    padding: 80px 0px 100px 0px;
+  }
+  .helpShelter ul {
+    gap: 52px 60px;
+  }
+  .helpShelter ul li {
+    height: 113px;
+    width: 170px;
+  }
+
+  .donation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: auto;
+  }
+  .donation .content {
+    margin-left: 0;
+    margin-bottom: 60px;
+    padding-right: 22px;
+  }
+
+  footer {
+    padding: 30px 64px 0px 64px;
+  }
+  footer .content {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  footer .content div.contacts {
+    margin-bottom: 65px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  footer .content div.contacts ul.contacts li:first-child, footer .content div.contacts ul.adress li:first-child {
+    font-size: 35px;
+  }
+  footer .content div.contacts ul.contacts li, footer .content div.contacts ul.adress li {
+    font-size: 20px;
+  }
+  footer .content div.contacts ul.contacts {
+    margin-right: 60px;
+  }
+  footer .content .footerImg {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  footer .content .footerImg img {
+    width: auto;
+  }
+
+  main {
+    padding: 80px 40px 74px 40px;
+  }
+  main h3 {
+    margin-bottom: 30px;
+  }
+  main .cards {
+    margin-bottom: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px 40px;
+  }
+  main .cards div:last-child, main .cards div:nth-child(7) {
+    display: none;
+  }
+
+  header.petsPage {
+    padding: 30px;
+  }
+}
+@media all and (max-width: 715px) {
+  .container {
+    width: auto;
+    padding: 0px 20px 0px 20px;
+  }
+
+  header .menuBurger {
+    display: block;
+  }
+  header ul {
+    display: none;
+  }
+
+  header.petsPage .menuBurger {
+    display: block;
+  }
+  header.petsPage ul {
+    display: none;
+  }
+
+  section.start div.content {
+    padding: 60px 0px 0px 0px;
+  }
+  section.start div.content .aboutImg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .ourFriends {
+    padding: 80px 0px 100px 0px;
+  }
+  .ourFriends .cards div:nth-of-type(2) {
+    display: none;
+  }
+  .ourFriends .cards div {
+    scale: 0.8;
+  }
+
+  .helpShelter ul {
+    gap: 30px 10px;
+  }
+  .helpShelter ul li {
+    height: auto;
+    width: auto;
+  }
+
+  .donation .content div {
+    width: auto;
+  }
+
+  footer .content div.contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .content div.contacts ul.contacts {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  footer .content .footerImg img {
+    width: 100%;
+  }
+
+  main .paginator button {
+    scale: 0.7;
+    margin-right: -10px;
+  }
+}
+@media all and (max-width: 410px) {
+  .ourFriends .cards button.prew {
+    left: -28px;
+    scale: 0.8;
+  }
+  .ourFriends .cards button.next {
+    right: -28px;
+    scale: 0.8;
+  }
+}
+@media all and (max-width: 320px) {
+  .container {
+    padding: 0;
+  }
+
+  h2, h3 {
+    font-size: 25px !important;
+    text-align: center !important;
+  }
+
+  header {
+    padding: 0px 10px 0px 10px;
+  }
+
+  section.start {
+    padding: 30px 10px 0px 10px;
+  }
+  section.start div.content .aboutContent {
+    margin-bottom: 105px;
+  }
+  section.start div.content .aboutContent p {
+    text-align: center;
+  }
+  section.start div.content .aboutImg {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  section.start div.content .aboutImg img {
+    width: 260px;
+    height: 271.77px;
+  }
+
+  section.about {
+    padding: 42px 25px 42px 25px;
+  }
+  section.about .content {
+    margin-bottom: 42px;
+  }
+  section.about div.img img {
+    width: 260px;
+    height: 353.6px;
+  }
+
+  .ourFriends {
+    padding: 33px 10px 42px 10px;
+  }
+  .ourFriends h3 {
+    margin-bottom: 41px;
+  }
+  .ourFriends .cards {
+    margin-bottom: 111px;
+  }
+  .ourFriends .cards div {
+    margin-right: 0;
+    scale: 1;
+  }
+  .ourFriends .cards button.prew {
+    left: 43px;
+    bottom: -69px;
+    scale: 1;
+  }
+  .ourFriends .cards button.next {
+    right: 43px;
+    bottom: -69px;
+    scale: 1;
+  }
+
+  .helpShelter {
+    padding: 42px 15px 42px 15px;
+  }
+  .helpShelter ul {
+    gap: 30px 30px;
+    padding-top: 42px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .helpShelter ul li {
+    height: 87px;
+    width: 130px;
+  }
+  .helpShelter ul li img {
+    width: 50px;
+    height: 50px;
+  }
+  .helpShelter ul li p {
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+  section.donation {
+    padding: 42px 10px 42px 10px;
+  }
+  section.donation div.content {
+    height: auto;
+    margin-bottom: 0;
+    padding: 0px 10px 42px 10px;
+  }
+  section.donation div.content p {
+    text-align: justify;
+    font-size: 15px;
+  }
+  section.donation div.content p:first-of-type {
+    margin-top: 20px;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+  }
+  section.donation div.content div {
+    margin-bottom: 20px;
+  }
+  section.donation div.content div a {
+    font-size: 15px;
+  }
+  section.donation .img {
+    width: 260px;
+    height: 135.2px;
+  }
+
+  footer {
+    padding: 30px 10px 0px 10px;
+  }
+  footer .content div.contacts {
+    margin-bottom: 42px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer .content div.contacts ul {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  footer .content div.contacts ul li:first-child {
+    font-size: 25px;
+    text-align: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  footer .content div.contacts ul li {
+    padding-bottom: 40px;
+  }
+  footer .content div.contacts ul li a {
+    font-size: 20px;
+  }
+  footer .content div.contacts ul.contacts li {
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: 20px;
+  }
+  footer .content div.contacts ul.contacts li:first-child {
+    font-size: 25px;
+  }
+  footer .content div.contacts ul.adress li {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 20px;
+  }
+  footer .content div.contacts ul.adress li:first-child {
+    font-size: 25px;
+  }
+  footer .content .footerImg img {
+    width: 260px;
+    height: 269px;
+  }
+
+  header.petsPage {
+    padding: 30px 20px;
+  }
+
+  main {
+    padding: 42px 10px 42px 10px;
+  }
+  main h3 {
+    margin-bottom: 40px;
+  }
+  main .cards {
+    gap: 0px 0px;
+    margin-bottom: 13px;
+  }
+  main .cards div:nth-of-type(4), main .cards div:nth-of-type(5), main .cards div:nth-of-type(6) {
+    display: none;
+  }
+  main .paginator button {
+    margin-right: 6px;
+    scale: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

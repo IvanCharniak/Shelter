@@ -2,12 +2,11 @@
 
 header {
     ul{
-        li:hover{
-            transition: 400ms;
-            border-bottom: 3px solid #F1CDB3;
+        li:hover a {
+            color: #FAFAFA;
         }
         li{
-            a:target{
+            a:active{
                 border-bottom: 3px solid #F1CDB3;
             }
         }
@@ -15,53 +14,69 @@ header {
 }
 header.petsPage {
     ul{
-
+        li:hover a {
+            color: #292929;;
+        }
         li{
-            a:target{
+            a:active{
                 border-bottom: 3px solid #F1CDB3;
             }
         }
     }
 }
 
-button:hover{
-    animation: btnAnim 2s ease 0s 1 normal forwards;
-}
-@keyframes btnAnim {
-	0% {
-		transform: translate(0);
-	}
+// button:hover{
+//     animation: btnAnim 2s ease 0s 1 normal forwards;
+// }
+// @keyframes btnAnim {
+// 	0% {
+// 		transform: translate(0);
+// 	}
 
-	20% {
-		transform: translate(-2px, 2px);
-	}
+// 	20% {
+// 		transform: translate(-2px, 2px);
+// 	}
 
-	40% {
-		transform: translate(-2px, -2px);
-	}
+// 	40% {
+// 		transform: translate(-2px, -2px);
+// 	}
 
-	60% {
-		transform: translate(2px, 2px);
-	}
+// 	60% {
+// 		transform: translate(2px, 2px);
+// 	}
 
-	80% {
-		transform: translate(2px, -2px);
-	}
+// 	80% {
+// 		transform: translate(2px, -2px);
+// 	}
 
-	100% {
-		transform: translate(0);
-	}
-}
+// 	100% {
+// 		transform: translate(0);
+// 	}
+// }
 
 // pets cards anim
 .cards{
     div:hover{
         transition: 400ms;
-        background-color: #F1CDB3;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
 
+        cursor: pointer;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+        button {
+            transition: 600ms;
+            background-color: #FDDCC4;
+            border: none !important;
+        }
+        
     }
+    button.prew:hover, button.next:hover{
+        transition: 400ms;
+        background: url('../img/button_arrow_hover.png') !important;
+        cursor:pointer;
+    }
+    
 }
 
 // paginator btns anim
@@ -75,7 +90,14 @@ button:hover{
 
 //links
 
-a:hover{
+.buttonPrimary:hover{
     transition: 400ms;
-    transform: scale(1.05);
+    background-color: #FDDCC4 !important;
+    
 }
+
+
+
+
+
+
