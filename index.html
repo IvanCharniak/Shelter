@@ -11,6 +11,7 @@
     <title>Shelter</title>
 </head>
 <body>
+
     <section class="start"> 
         
         <header>
@@ -18,7 +19,7 @@
                 <h1><a href="">Cozy House</a></h1>
                 <p>Shelter for pets in Boston</p>
             </div>
-            <ul>
+            <ul class="nav">
                 <li><a >About the shelter</a> </li>
                 <li><a href="Pets.html">Our pets</a> </li>
                 <li><a href="#help">Help the shelter</a> </li>
@@ -26,6 +27,14 @@
             </ul>
             <div class="menuBurger">
                 <img src="img/Burger.png" alt="menu">
+            </div>
+            <div class="mobileMenu">
+                <ul class ="navLinks">
+                    <li><a >About the shelter</a> </li>
+                    <li><a href="Pets.html">Our pets</a> </li>
+                    <li><a  href="#help">Help the shelter</a> </li>
+                    <li><a  href="#footer">Contacts</a> </li>
+                </ul>
             </div>
         </header>
 
@@ -74,30 +83,16 @@
                 are looking for a house
             </h3>
 
-            <div class="cards">
-                    <button class="prew"></button>
-
-                    <div>
-                        <img src="img/katrine.png" alt="Katrine Photo">
-                        <p>Katrine</p>
-                        <button class="more">Learn more</button>
-                    </div>
-                    <div>
-                        <img src="img/jennifer.png" alt="Jennifer Photo">
-                        <p>Jennifer</p>
-                        <button class="more">Learn more</button>
-                    </div>
-                    <div>
-                        <img src="img/woody.png" alt="Woody Photo">
-                        <p>Woody</p>
-                        <button class="more">Learn more</button>
-                    </div>
-
-                    <button class="next"></button>
+            <div class="cards" id="cards">
+                    
+ 
+                            
             </div>
 
             <a href="Pets.html" class="buttonPrimary">Get to know the rest</a>
             
+            <button class="prew"></button>
+            <button class="next"></button>
         </section>
 
         <section id="help" class="helpShelter">
@@ -168,7 +163,7 @@
         
     </div>
 
-    <footer id="footer">
+    <footer class="footer" id="footer">
         <div class="content">
             <div class="contacts">
                 <ul class="contacts">
@@ -215,5 +210,8 @@
         
         
     </footer>
+
+    <script  src="script.js"></script>
+    <script defer src="script2.js"></script>
 </body>
 </html>
