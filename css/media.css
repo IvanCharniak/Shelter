@@ -9,7 +9,7 @@
 @media all and (max-width: 1278px) {
   header {
     width: auto; }
-    header ul {
+    header ul.nav {
       margin-left: 7vw; }
 
   section.start div.content .aboutImg img {
@@ -33,7 +33,7 @@
 
   header {
     width: auto; }
-    header ul {
+    header ul.nav {
       margin-left: 17vw; }
 
   footer .content div.contacts ul.contacts li, footer .content div.contacts ul.adress li {
@@ -70,7 +70,7 @@
     padding: 0;
     width: auto;
     justify-content: space-between; }
-    header ul {
+    header ul.nav {
       margin-left: 0; }
 
   section.about {
@@ -151,12 +151,12 @@
 
   header .menuBurger {
     display: block; }
-  header ul {
+  header ul.nav {
     display: none; }
 
   header.petsPage .menuBurger {
     display: block; }
-  header.petsPage ul {
+  header.petsPage ul.nav {
     display: none; }
 
   section.start div.content {

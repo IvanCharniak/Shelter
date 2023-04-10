@@ -22,7 +22,7 @@
 @media all and (max-width:1278px){
     header{
         width: auto;
-        ul{
+        ul.nav{
             margin-left: 7vw;
         }
     }
@@ -68,7 +68,7 @@
     }
     header{
         width: auto;
-        ul{
+        ul.nav{
             margin-left: 17vw;
         }
     }
@@ -126,7 +126,7 @@
         padding: 0;
         width: auto;
         justify-content: space-between;
-         ul{
+         ul.nav{
             margin-left: 0;
          }
     }
@@ -249,7 +249,7 @@
         .menuBurger{
             display: block;
         }
-        ul{
+        ul.nav{
             display: none;
         }
     }
@@ -257,7 +257,7 @@
         .menuBurger{
             display: block;
         }
-        ul{
+        ul.nav{
             display: none;
         }
     }

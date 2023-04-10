@@ -27,7 +27,8 @@ header.petsPage ul li a:active {
   background-color: #FDDCC4;
   border: none !important;
 }
-.cards button.prew:hover, .cards button.next:hover {
+
+section.ourFriends button.prew:hover, section.ourFriends button.next:hover {
   -webkit-transition: 400ms;
   transition: 400ms;
   background: url("../img/button_arrow_hover.png") !important;
@@ -63,6 +64,10 @@ button {
 
 p {
   white-space: pre-wrap;
+}
+
+.displayHidden {
+  display: none;
 }
 
 .container {
@@ -186,7 +191,7 @@ header p {
   padding-left: 4px;
   color: white;
 }
-header ul {
+header ul.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,24 +205,25 @@ header ul {
   line-height: 160%;
   margin-left: 573px;
 }
-header ul li {
+header ul.nav li {
   margin-right: 35px;
   border-bottom: 3px solid #f1cdb300;
 }
-header ul li a {
+header ul.nav li a {
   color: #CDCDCD;
 }
-header ul li:first-child {
+header ul.nav li:first-child {
   border-bottom: 3px solid #F1CDB3;
 }
-header ul li:first-child a {
+header ul.nav li:first-child a {
   color: #FAFAFA;
 }
-header ul li:last-child {
+header ul.nav li:last-child {
   margin-right: 0;
 }
 header .menuBurger {
   display: none;
+  z-index: 2;
 }
 
 .about {
@@ -273,10 +279,33 @@ header .menuBurger {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 40px 100px 40px;
+  padding: 80px 0px 100px 0px;
+}
+.ourFriends button.prew {
+  height: 52px;
+  width: 52px;
+  background: url("../img/button_arrow.png") no-repeat center center;
+  border: none;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 48%;
+}
+.ourFriends button.next {
+  height: 52px;
+  width: 52px;
+  border: none;
+  background: url("../img/button_arrow.png") no-repeat center center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 48%;
 }
 .ourFriends h3 {
   font-family: 'Georgia';
@@ -305,8 +334,18 @@ header .menuBurger {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  width: 1200px;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+  padding: 0px 105px;
+  overflow-x: hidden;
 }
 .ourFriends .cards div {
+  left: 0;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+.ourFriends .cards .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,10 +365,10 @@ header .menuBurger {
   border-radius: 9px;
   position: relative;
 }
-.ourFriends .cards div img {
+.ourFriends .cards .card img {
   margin-bottom: 30px;
 }
-.ourFriends .cards div button {
+.ourFriends .cards .card button {
   height: 52px;
   width: 187px;
   border: 2px solid #F1CDB3;
@@ -340,7 +379,7 @@ header .menuBurger {
   font-size: 17px;
   line-height: 130%;
 }
-.ourFriends .cards div p {
+.ourFriends .cards .card p {
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -350,31 +389,11 @@ header .menuBurger {
   letter-spacing: 0.06em;
   margin-bottom: 30px;
 }
-.ourFriends .cards div div:hover ~ button {
+.ourFriends .cards .card div:hover ~ button {
   background-color: #ea7623;
 }
-.ourFriends .cards > div:last-of-type {
+.ourFriends .cards > div:nth-of-type(3), .ourFriends .cards > div:nth-of-type(6), .ourFriends .cards > div:nth-of-type(9), .ourFriends .cards > div:nth-of-type(12) {
   margin-right: 0;
-}
-.ourFriends .cards button.prew {
-  height: 52px;
-  width: 52px;
-  background: url("../img/button_arrow.png") no-repeat center center;
-  border: none;
-  display: block;
-  position: absolute;
-  left: -105px;
-}
-.ourFriends .cards button.next {
-  height: 52px;
-  width: 52px;
-  border: none;
-  background: url("../img/button_arrow.png") no-repeat center center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  display: block;
-  position: absolute;
-  right: -105px;
 }
 .ourFriends a.buttonPrimary {
   display: -webkit-box;
@@ -398,6 +417,75 @@ header .menuBurger {
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
+}
+.ourFriends .modalPopup {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: -65px;
+  left: 190px;
+}
+.ourFriends .modalPopup .modalPopupBtn {
+  width: 52px;
+  height: 52px;
+  background-image: url("../img/modal_close_button.png");
+  position: absolute;
+  right: -42px;
+  top: -51px;
+  border: none;
+  border-radius: 50%;
+}
+.ourFriends .modalPopup .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 9px 0px 0px 9px;
+}
+.ourFriends .modalPopup .popup img {
+  width: 500px;
+  height: 500px;
+}
+.ourFriends .modalPopup .popup .popupContent {
+  padding: 50px 20px 88px 0px;
+  margin-left: 30px;
+}
+.ourFriends .modalPopup .popup .popupContent h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+.ourFriends .modalPopup .popup .popupContent h4 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  margin-bottom: 40px;
+}
+.ourFriends .modalPopup .popup .popupContent p {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  white-space: pre-wrap;
+  max-width: 350px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.ourFriends .modalPopup .popup .popupContent p:first-of-type {
+  margin-bottom: 40px;
+  padding-left: 0;
 }
 
 .helpShelter {
@@ -770,6 +858,68 @@ main .paginator .curentPage {
   border: none;
 }
 
+.mobileMenu {
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.mobileMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #292929;
+  padding: 250px 0px 0px 0px;
+  height: 100%;
+}
+.mobileMenu ul li {
+  margin-bottom: 43px;
+}
+.mobileMenu ul li a {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  color: #FAFAFA;
+}
+.mobileMenu ul li:last-child {
+  margin-bottom: 0;
+}
+
+.mobileMenuActive {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.rotateBurger {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.scrollBlock {
+  overflow: hidden;
+}
+
 @media all and (max-width: 1200px) {
   .ourFriends .cards div {
     scale: 0.8;
@@ -786,7 +936,7 @@ main .paginator .curentPage {
   header {
     width: auto;
   }
-  header ul {
+  header ul.nav {
     margin-left: 7vw;
   }
 
@@ -820,7 +970,7 @@ main .paginator .curentPage {
   header {
     width: auto;
   }
-  header ul {
+  header ul.nav {
     margin-left: 17vw;
   }
 
@@ -876,7 +1026,7 @@ main .paginator .curentPage {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  header ul {
+  header ul.nav {
     margin-left: 0;
   }
 
@@ -1006,14 +1156,14 @@ main .paginator .curentPage {
   header .menuBurger {
     display: block;
   }
-  header ul {
+  header ul.nav {
     display: none;
   }
 
   header.petsPage .menuBurger {
     display: block;
   }
-  header.petsPage ul {
+  header.petsPage ul.nav {
     display: none;
   }
 
