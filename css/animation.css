@@ -21,7 +21,8 @@ header.petsPage ul li a:active {
     transition: 600ms;
     background-color: #FDDCC4;
     border: none !important; }
-.cards button.prew:hover, .cards button.next:hover {
+
+section.ourFriends button.prew:hover, section.ourFriends button.next:hover {
   -webkit-transition: 400ms;
   transition: 400ms;
   background: url("../img/button_arrow_hover.png") !important;

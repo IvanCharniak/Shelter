@@ -70,13 +70,14 @@ header.petsPage {
             border: none !important;
         }
         
-    }
+    } 
+}
+section.ourFriends{
     button.prew:hover, button.next:hover{
         transition: 400ms;
         background: url('../img/button_arrow_hover.png') !important;
         cursor:pointer;
     }
-    
 }
 
 // paginator btns anim
